@@ -1,0 +1,43 @@
+{
+    "name": "@sarkari_student",
+    "description": "@sarkari_student Telegram Bot",
+    "repository": "https://github.com/vspteam/RWAGROUPBOT",
+    "stack": "heroku-22",
+    "keywords": [
+        "telegram bot",
+        "pyrogram"
+    ],
+    "env": {
+        "API_ID": {
+            "description": "Your API_ID from https://my.telegram.org/apps",
+            "value": "26037262",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from https://my.telegram.org/apps",
+            "value": "9b2cabc8b962945d05152d0fe5cbc37f",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot token from @BotFather",
+            "required": true
+        },
+        "AUTH_USERS": {
+            "description": "Comma-separated list of authorized user IDs",
+            "value": "7653322737",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ]
+}
